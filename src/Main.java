@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -21,5 +22,10 @@ public class Main {
         //filter the even numbers from the number Stream
         Stream<Integer> evenStream = stream.filter(n -> n % 2 == 0);
         evenStream.forEach(n-> System.out.println(n));
+
+        //show the first even number in the number stream
+        Stream<Integer> stream3 = Stream.of(1,2,3,4,5);
+        Optional<Integer> first = stream3.filter(n -> n % 2 == 0).findFirst();
+        System.out.println("First element: "+first);
     }
 }
