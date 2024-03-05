@@ -28,6 +28,5 @@ public class Main {
         Optional<Integer> first = stream3.filter(n -> n % 2 == 0).findFirst();
         System.out.println("First element: "+first);
 
-        //find min and max even number in the number stream
     }
 }
