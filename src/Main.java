@@ -1,3 +1,5 @@
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -9,7 +11,11 @@ public class Main {
 
         //Transform each element to doublegit
         Stream<Integer> stream1 = Stream.of(1,2,3,4,5);
-        Stream<Integer> doubleStream = stream1.map(n -> n * 2);
-        doubleStream.forEach(n-> System.out.println(n));
+//        Stream<Integer> doubleStream = stream1.map(n -> n * 2);
+//        doubleStream.forEach(n-> System.out.println(n));
+
+        //to store value into a new List
+        List<Integer> doubleValue = stream1.map(n-> n*2).collect(Collectors.toList());
+        System.out.println(doubleValue);
     }
 }
